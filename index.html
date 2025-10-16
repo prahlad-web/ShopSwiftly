@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub - Modern E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>ShopHub</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Discover Your Style</h1>
+            <p>Explore our curated collection of premium products</p>
+            <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">
+                Shop Now
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products-section" id="shop">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Handpicked items just for you</p>
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" alt="Premium Watch">
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Watch</h3>
+                        <p class="product-description">Elegant timepiece for modern lifestyle</p>
+                        <div class="product-footer">
+                            <span class="price">$299.99</span>
+                            <button class="btn-cart" onclick="addToCart(1, 'Premium Watch', 299.99, 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=100&h=100&fit=crop')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop" alt="Designer Sunglasses">
+                        <div class="product-badge hot">Hot</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Sunglasses</h3>
+                        <p class="product-description">UV protection with style</p>
+                        <div class="product-footer">
+                            <span class="price">$149.99</span>
+                            <button class="btn-cart" onclick="addToCart(2, 'Designer Sunglasses', 149.99, 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=100&h=100&fit=crop')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop" alt="Running Shoes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Running Shoes</h3>
+                        <p class="product-description">Comfort meets performance</p>
+                        <div class="product-footer">
+                            <span class="price">$129.99</span>
+                            <button class="btn-cart" onclick="addToCart(3, 'Running Shoes', 129.99, 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=100&h=100&fit=crop')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=400&h=400&fit=crop" alt="Leather Backpack">
+                        <div class="product-badge">Sale</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Leather Backpack</h3>
+                        <p class="product-description">Durable and spacious design</p>
+                        <div class="product-footer">
+                            <span class="price">$189.99</span>
+                            <button class="btn-cart" onclick="addToCart(4, 'Leather Backpack', 189.99, 'https://images.unsplash.com/photo-1491637639811-60e2756cc1c7?w=100&h=100&fit=crop')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop" alt="Wireless Headphones">
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Headphones</h3>
+                        <p class="product-description">Premium sound quality</p>
+                        <div class="product-footer">
+                            <span class="price">$249.99</span>
+                            <button class="btn-cart" onclick="addToCart(5, 'Wireless Headphones', 249.99, 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?w=400&h=400&fit=crop" alt="Smart Watch">
+                        <div class="product-badge hot">Hot</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smart Watch</h3>
+                        <p class="product-description">Track your fitness goals</p>
+                        <div class="product-footer">
+                            <span class="price">$399.99</span>
+                            <button class="btn-cart" onclick="addToCart(6, 'Smart Watch', 399.99, 'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=100&h=100&fit=crop')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=400&fit=crop" alt="Fashion Perfume">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fashion Perfume</h3>
+                        <p class="product-description">Captivating fragrance</p>
+                        <div class="product-footer">
+                            <span class="price">$89.99</span>
+                            <button class="btn-cart" onclick="addToCart(7, 'Fashion Perfume', 89.99, 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=100&h=100&fit=crop')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop" alt="Travel Suitcase">
+                        <div class="product-badge">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Travel Suitcase</h3>
+                        <p class="product-description">Your perfect travel companion</p>
+                        <div class="product-footer">
+                            <span class="price">$219.99</span>
+                            <button class="btn-cart" onclick="addToCart(8, 'Travel Suitcase', 219.99, 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=100&h=100&fit=crop')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">$0.00</span>
+            </div>
+            <button class="btn-checkout">
+                <i class="fas fa-credit-card"></i> Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText">Product added to cart!</span>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About ShopHub</h2>
+            <p class="about-text">
+                We are dedicated to bringing you the finest selection of premium products. 
+                Our mission is to provide an exceptional shopping experience with quality items 
+                that enhance your lifestyle. Shop with confidence and discover the difference.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>contact@shophub.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Shopping St, NY 10001</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>ShopHub</span>
+                    </div>
+                    <p>Your destination for premium products</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

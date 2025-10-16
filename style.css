@@ -176,15 +176,17 @@ body {
 
 .hero-content h1 {
     font-size: 3.5rem;
+    color: rgb(205, 164, 50);
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 800;
     animation: fadeInUp 0.8s ease;
 }
 
 .hero-content p {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
-    opacity: 0.95;
+    color: rgb(226, 43, 217);
+    opacity: 1.100;
     animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
